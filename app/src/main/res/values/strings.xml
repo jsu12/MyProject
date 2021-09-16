@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyProject</string>
+    <string name="et_email">이메일 주소를 입력해주세요</string>
+    <string name="et_pw">비밀번호를 입력해 주세요</string>
+    <string name="tv_searchpw">비밀번호를 잊어버리셨나요?</string>
+    <string name="btn_register">로그인</string>
+    <string name="tv_email">이메일 주소</string>
+    <string name="tv_pw">비밀번호</string>
+    <string name="toolbar_login">로그인</string>
+</resources>
