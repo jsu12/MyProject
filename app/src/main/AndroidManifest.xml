@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.rhtth.myproject">
 
-    <!--인터넷 사용 권한 설정-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <queries>
+        <package android:name="com.kakao.talk" />
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".Login.GlobalApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/application_icon_foreground"
+        android:label="나의 번역기"
+        android:roundIcon="@mipmap/application_icon_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyProject">
         <activity
-            android:name=".Login.MainLoginActivity"
-            android:exported="true" >
+            android:name=".TargetLanguageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SourceLaguageActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Login.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TranslationActivity"
+            android:exported="true">
 
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".Login.KakaoLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainLoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +45,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" /> <!-- kakao Redirect URI -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao4cd429ce0c55478bad01d9b501043861" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

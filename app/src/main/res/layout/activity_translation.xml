@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        tools:context=".TranslationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sourceLanguage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="@font/gowunbatangbold"
+                android:gravity="center"
+                android:text="한국어"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:src="@drawable/translation_image_button"
+                android:id="@+id/button_translation"
+                android:layout_width="0dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#ffffff"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="0.5"
+                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/targetLanguage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="22sp"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="@font/gowunbatangbold"
+                android:gravity="center"
+                android:text="영어" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <EditText
+            android:id="@+id/translationText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="text"
+            android:ems="10"
+            android:fontFamily="@font/gowunbatangbold"
+            android:gravity="start|top"
+            android:importantForAccessibility="no"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="23sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:hint="종이비행기를 눌러 번역해 주세요"
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:fontFamily="@font/gowunbatangbold"
+            android:textSize="23sp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:importantForAccessibility="no"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</layout>

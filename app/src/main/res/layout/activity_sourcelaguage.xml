@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SourceLaguageActivity">
+
+        <!--Tool bar Text지정-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sourceLanguage_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/binggraesamanco"
+                android:layout_height="wrap_content"
+                android:text="입력 언어"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sourceLanguage_toolbar">
+
+        <TextView
+            android:id="@+id/source_ko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="한국어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DAB9DF"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/source_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="영어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4BC4FB"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/source_ja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="일본어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A8BCCC"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/source_zhcn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="중국어(간체)"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EC739C"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/source_zhtw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="중국어(번체)"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#8F7269"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/source_ru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="러시아어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#37AAA0"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/source_fr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="프랑스어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C3F18E"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/source_es"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gowunbatangbold"
+            android:text="스페인어"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingBottom="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFD555"
+            android:layout_marginBottom="10dp"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
