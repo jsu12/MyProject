@@ -7,6 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.rhtth.myproject.Login.FindAccount
 import com.rhtth.myproject.Login.KakaoLoginActivity
 import com.rhtth.myproject.Login.LoginActivity
 import com.rhtth.myproject.Login.RegisterActivity
@@ -49,6 +50,12 @@ class MainLoginActivity : AppCompatActivity() {
             startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
 
+        //계정찾기 버튼 클릭시 ->FindAccountActivity호출
+        binding.findAccount.setOnClickListener {
+            val intent = Intent(this,FindAccount::class.java)
+            startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        }
+
 
     }
         //Activity Restart시 Animation효과 재시작
@@ -62,6 +69,11 @@ class MainLoginActivity : AppCompatActivity() {
             super.onPause()
             binding.textViewAnimation.clearAnimation()
         }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        finish()
+    }
 
 
 

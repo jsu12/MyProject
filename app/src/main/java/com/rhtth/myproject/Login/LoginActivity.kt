@@ -58,11 +58,17 @@ class LoginActivity : AppCompatActivity() {
             signIn(userEmail,userPassword)
         }
 
+        //"비밀번호를 잊어버리셨나요?"를 클릭시 FindAccountActivity로 이동
+        binding.loginFindAccount.setOnClickListener {
+            val intent = Intent(this, FindAccount::class.java)
+            startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        }
+
     }
 
     override fun onStart() {
         super.onStart()
-        //자동로그인 및 회원가입 후 바로 로그인
+        //자동로그인 및 회원가입 후 바로 로그인(Firebase)
       //  movePage(auth?.currentUser)
     }
 
